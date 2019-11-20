@@ -1,0 +1,65 @@
+.services {
+  width: 100%;
+  padding: 100px 0;
+  background: #f8f9fb;
+
+  &__container {
+    width: 1110px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 36px;
+    color: #333457;
+
+    &__sub {
+      font-size: 24px;
+      font-weight: 500;
+      margin-top: 35px;
+      margin-bottom: 30px;
+      color: #333457;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    flex-wrap: wrap;
+
+    &__item {
+      margin-top: 30px;
+      width: 350px;
+      height: 290px;
+      box-sizing: border-box;
+      padding: 30px 20px;
+      border: 1px dashed rgba(0, 123, 255, 0.75);
+
+      &__icon {
+        height: 89.15px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 25px;
+      }
+
+      &__heading {
+        text-align: center;
+        font-size: 20px;
+        color: #333457;
+        font-family: "Poppins";
+        font-weight: 500;
+      }
+
+      &__paragraph {
+        margin-top: 10px;
+        text-align: center;
+        font-family: "Rubik";
+        font-weight: normal;
+        font-size: 16px;
+        color: #333457;
+        line-height: 28px;
+      }
+    }
+  }
+}
