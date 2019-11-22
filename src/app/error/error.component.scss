@@ -1,0 +1,27 @@
+.error {
+  width: 100vw;
+  height: 100vh;
+  background: #2d72d9;
+
+  &__heading {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+  }
+
+  &__link {
+    color: white;
+    font-size: 40px;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    cursor: pointer;
+
+    & > span {
+      text-decoration: underline;
+    }
+  }
+}
