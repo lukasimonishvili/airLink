@@ -7,6 +7,12 @@
     width: 1110px;
     height: 100%;
     margin: 0 auto;
+
+    @media screen and (max-width: 1120px) {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
   }
 
   &__heading {
@@ -59,6 +65,41 @@
         font-size: 16px;
         color: #333457;
         line-height: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1096px) {
+  .services {
+    &__heading {
+      text-align-last: center;
+
+      &__sub {
+        text-align: center;
+      }
+    }
+
+    &__list {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (max-width: 306px) {
+  .services {
+    &__list {
+      &__item {
+        height: 230px;
+
+        &__heading {
+          font-size: 16px;
+        }
+
+        &__paragraph {
+          font-size: 12px;
+          line-height: 14px;
+        }
       }
     }
   }

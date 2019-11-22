@@ -1,8 +1,12 @@
 .contact {
   width: 100%;
-  //   clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
   height: 300px;
   background: #3071ff;
+
+  @media screen and (max-width: 735px) {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 
   &__form {
     width: 715px;
@@ -14,6 +18,12 @@
     transform: translateX(-50%);
     box-shadow: 7px 7px 20px 0px #bec5c6;
     flex-wrap: wrap;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 735px) {
+      width: calc(100% - 120px);
+      padding: 10px;
+    }
 
     &__heading {
       font-family: "Poppins";
@@ -23,6 +33,11 @@
       color: #232323;
       width: 100%;
       margin-bottom: 40px;
+
+      @media screen and (max-width: 530px) {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
     }
 
     &__input {
@@ -37,6 +52,10 @@
       font-size: 16px;
       font-family: "Poppins";
       font-weight: normal;
+
+      @media screen and (max-width: 735px) {
+        width: 100%;
+      }
 
       &::placeholder {
         color: #aeaeae;

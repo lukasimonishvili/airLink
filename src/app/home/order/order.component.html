@@ -1,41 +1,51 @@
-<div class="order">
+<div class="order" id="order">
   <div class="order__container">
     <h2 class="order__heading">Make new order online</h2>
-    <div class="order__form">
-      <div class="flex-space-btw">
+    <form
+      [formGroup]="orderForm"
+      (ngSubmit)="onOrderSubmit()"
+      class="order__form"
+    >
+      <div class="flex-space-btw order__form__input__wrapper">
         <input
           placeholder="Enter your name..."
           type="text"
           class="order__form__input"
+          formControlName="name"
         />
         <input
           placeholder="Enter your last name..."
           type="text"
           class="order__form__input"
+          formControlName="lastName"
         />
       </div>
-      <div class="flex-space-btw">
+      <div class="flex-space-btw order__form__input__wrapper">
         <input
           placeholder="Enter your phone number..."
           type="text"
           class="order__form__input"
+          formControlName="number"
         />
         <input
           placeholder="Enter your address..."
           type="text"
           class="order__form__input"
+          formControlName="address"
         />
       </div>
       <input
         placeholder="Enter your ID number..."
-        type="text"
+        type="number"
         class="order__form__input order__form__input__large"
+        formControlName="idNumber"
       />
       <textarea
         placeholder="Enter message..."
         class="order__form__textarea"
+        formControlName="message"
       ></textarea>
       <button type="submit" class="order__form__submit">Send</button>
-    </div>
+    </form>
   </div>
 </div>

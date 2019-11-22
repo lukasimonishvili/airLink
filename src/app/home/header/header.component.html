@@ -52,7 +52,7 @@
       </div>
     </div>
   </div>
-  <div class="header__bottom">
+  <div class="header__bottom relative">
     <div class="header__container flex-space-btw">
       <h1>
         <img
@@ -61,40 +61,47 @@
           alt=""
         />
       </h1>
-      <div class="header__bottom__navigation flex">
+      <div class="header__bottom__burger" (click)="toggleMenu()">
+        <div class="header__bottom__burger__button">
+          <div class="header__bottom__burger__line"></div>
+          <div class="header__bottom__burger__line"></div>
+          <div class="header__bottom__burger__line"></div>
+        </div>
+      </div>
+      <div class="header__bottom__navigation flex" id="navigation">
         <div
           class="header__bottom__navigation__item header__bottom__navigation__item__active"
-          (click)="navigate($event)"
+          (click)="navigate('slider')"
         >
           Home
         </div>
         <div
           class="header__bottom__navigation__item"
-          (click)="navigate($event)"
+          (click)="navigate('about')"
         >
           About us
         </div>
         <div
           class="header__bottom__navigation__item"
-          (click)="navigate($event)"
+          (click)="navigate('services')"
         >
           Services
         </div>
         <div
           class="header__bottom__navigation__item"
-          (click)="navigate($event)"
+          (click)="navigate('order')"
         >
           Make order
         </div>
         <div
           class="header__bottom__navigation__item"
-          (click)="navigate($event)"
+          (click)="navigate('speed')"
         >
           Check speed
         </div>
         <div
           class="header__bottom__navigation__item"
-          (click)="navigate($event)"
+          (click)="navigate('contact')"
         >
           Contact
         </div>

@@ -1,5 +1,9 @@
-<div class="contact relative">
-  <div class="contact__form absolute flex-space-btw">
+<div class="contact relative" id="contact">
+  <form
+    [formGroup]="messageForm"
+    (ngSubmit)="onMessageSubmit()"
+    class="contact__form absolute flex-space-btw"
+  >
     <h2 class="contact__form__heading">
       Don't Hesitate To Contact <br />
       With Us, Say Hello......
@@ -8,18 +12,31 @@
       placeholder="Full Name Here"
       type="text"
       class="contact__form__input"
+      formControlName="name"
     />
-    <input placeholder="Email Here" type="text" class="contact__form__input" />
+    <input
+      formControlName="email"
+      placeholder="Email Here"
+      type="text"
+      class="contact__form__input"
+    />
     <input
       placeholder="Phone Number"
       type="text"
       class="contact__form__input"
+      formControlName="number"
     />
-    <input placeholder="Subject" type="text" class="contact__form__input" />
+    <input
+      formControlName="subject"
+      placeholder="Subject"
+      type="text"
+      class="contact__form__input"
+    />
     <textarea
+      formControlName="message"
       placeholder="Message Us"
       class="contact__form__input contact__form__textarea"
     ></textarea>
     <button type="submit" class="contact__form__button">Send Message</button>
-  </div>
+  </form>
 </div>
