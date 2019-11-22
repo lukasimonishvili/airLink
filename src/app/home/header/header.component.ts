@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
+import { LocalizationService } from "../../services/Localization/localization.service";
 
 @Component({
   selector: "app-header",
@@ -6,28 +8,43 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  selectedValue: any;
+  locale: String;
+
+  constructor(
+    private localization: LocalizationService,
+    private translate: TranslateService
+  ) {
+    this.locale = localStorage.getItem("locale");
+    console.log(this.locale);
+    if (this.locale) {
+      this.selectedValue = this.locale;
+      this.translate.use(this.selectedValue);
+      this.localization.changeServiceSource(this.locale);
+    } else {
+      this.selectedValue = "en";
+      this.translate.use(this.selectedValue);
+      this.localization.changeServiceSource("en");
+    }
+  }
+
+  switchLanguage() {
+    if (this.selectedValue == "en") {
+      this.selectedValue = "ka";
+      this.translate.use(this.selectedValue);
+      localStorage.setItem("locale", this.selectedValue);
+      this.localization.changeServiceSource(this.selectedValue);
+    } else {
+      this.selectedValue = "en";
+      this.translate.use(this.selectedValue);
+      localStorage.setItem("locale", this.selectedValue);
+      this.localization.changeServiceSource(this.selectedValue);
+    }
+  }
 
   ngOnInit() {}
 
-  // private activeIndex: number = 0;
-
   public navigate(id) {
-    // let element = e.target;
-    // let index = Array.prototype.indexOf.call(
-    //   element.parentNode.childNodes,
-    //   element
-    // );
-    // let navigation: any = document.getElementsByClassName(
-    //   "header__bottom__navigation__item"
-    // );
-    // if (index !== this.activeIndex) {
-    //   navigation[this.activeIndex].classList.toggle(
-    //     "header__bottom__navigation__item__active"
-    //   );
-    //   e.target.classList.toggle("header__bottom__navigation__item__active");
-    //   this.activeIndex = index;
-    // }
     if (id === "speed") {
       window.open(
         "http://airavro.speedtestcustom.com/result/5eec3e40-0d10-11ea-98c7-01efee202c05",

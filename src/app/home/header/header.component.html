@@ -8,7 +8,7 @@
             alt=""
             class="header__top__item__icon"
           />
-          <span class="header__top__item__content">Phone: +995 32 2420410</span>
+          <span class="header__top__item__content" translate>header.phone</span>
         </div>
         <div class="header__top__item flex-center">
           <img
@@ -16,7 +16,9 @@
             alt=""
             class="header__top__item__icon"
           />
-          <span class="header__top__item__content">D.Guramishvili #41e</span>
+          <span class="header__top__item__content" translate
+            >header.address</span
+          >
         </div>
         <!-- <div class="header__top__item flex-center">
           <img
@@ -71,39 +73,51 @@
       <div class="header__bottom__navigation flex" id="navigation">
         <div
           class="header__bottom__navigation__item header__bottom__navigation__item__active"
+          translate
           (click)="navigate('slider')"
         >
-          Home
+          header.navigation.home
         </div>
         <div
           class="header__bottom__navigation__item"
+          translate
           (click)="navigate('about')"
         >
-          About us
+          header.navigation.about
         </div>
         <div
           class="header__bottom__navigation__item"
+          translate
           (click)="navigate('services')"
         >
-          Services
+          header.navigation.services
         </div>
         <div
           class="header__bottom__navigation__item"
+          translate
           (click)="navigate('order')"
         >
-          Make order
+          header.navigation.order
         </div>
         <div
           class="header__bottom__navigation__item"
+          translate
           (click)="navigate('speed')"
         >
-          Check speed
+          header.navigation.speed
         </div>
         <div
           class="header__bottom__navigation__item"
+          translate
           (click)="navigate('contact')"
         >
-          Contact
+          header.navigation.contanct
+        </div>
+        <div
+          class="header__bottom__navigation__item"
+          (click)="switchLanguage()"
+        >
+          {{ selectedValue.toUpperCase() }}
         </div>
       </div>
     </div>
