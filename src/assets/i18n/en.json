@@ -1,0 +1,74 @@
+{
+  "header": {
+    "phone": "Phone: +995 32 24204210",
+    "address": "D.Guramishvili #41e",
+    "navigation": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "order": "Make Order",
+      "speed": "Ckeck Speed",
+      "contanct": "Contact"
+    }
+  },
+  "slider": {
+    "chanels": "Not enough chanels?",
+    "internet": "Slow internet?",
+    "text": "you can forget  about this problems with us. 'AirLink Georgia' is best internet and TV provider"
+  },
+  "about": {
+    "heading": "About AirLink",
+    "text": "Georgian AirLink is internet provider company. we offer you Internet and telecommunication services according to modern standards. All products are tailored to the customer's interests and individual requirements. Georgian AirLink`s primary goal is to provide customers with innovative and demand oriented Internet packages and various high quality communication services. კThe goal of the company is to establish a leader in the telecommunications space, achieving maximum customer interest, offering innovative products, introducing new services, increasing market share and profitability. Our offered product enables users to obtain high quality Internet (TV) at the most affordable prices in the Georgian market."
+  },
+  "services": {
+    "heading": "Why AirLink?",
+    "subHeading": "there is few features that may interest you",
+    "cheap": {
+      "heading": "low cost",
+      "text": "we offer you fastest internet and best internet television at the most affordable price"
+    },
+    "fast": {
+      "heading": "Fast",
+      "text": "Our fastest optical internet Allows you to travel the web without restrictions."
+    },
+    "TV": {
+      "heading": "TV",
+      "text": "Multi-functional Internet TV quality will create the highest level of comfort."
+    },
+    "team": {
+      "heading": "Professional team",
+      "text": "The main goal of our team is your comfort, which is in line with world standards."
+    },
+    "news": {
+      "heading": "Innovative news",
+      "text": "We will systematically offer you new and exciting packages at an affordable price."
+    },
+    "support": {
+      "heading": "Support",
+      "text": "Our team of operators is always ready to help you with any problem."
+    }
+  },
+  "order": {
+    "heading": "Make new order online",
+    "name": "Enter your name...",
+    "lastName": "Enter yout last name...",
+    "number": "Enter your phone number...",
+    "address": "Enter your address...",
+    "idNumber": "Enter your ID number...",
+    "message": "Enter message...",
+    "send": "Send"
+  },
+  "contact": {
+    "heading": "Don't Hesitate To Contact With Us, Say Hello......",
+    "name": "Full Name Here",
+    "email": "Email Here",
+    "number": "Phone Number",
+    "subject": "Subject",
+    "message": "Message Us",
+    "send": "Send Message"
+  },
+  "footer": {
+    "heading": "Quick Links",
+    "bottom": "Copyright © 2019 AvroLab. All Rights Reserved."
+  }
+}

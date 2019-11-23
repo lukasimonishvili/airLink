@@ -12,6 +12,13 @@ import { OrderComponent } from "./order/order.component";
 import { SpeedTestComponent } from "./speed-test/speed-test.component";
 import { ContactComponent } from "./contact/contact.component";
 import { FooterComponent } from "./footer/footer.component";
+import { HttpClient } from "@angular/common/http";
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -25,6 +32,20 @@ import { FooterComponent } from "./footer/footer.component";
     ContactComponent,
     FooterComponent
   ],
-  imports: [FormsModule, ReactiveFormsModule, CommonModule, HomeRoutingModule]
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+    HomeRoutingModule,
+    TranslateModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  ],
+  providers: []
 })
 export class HomeModule {}

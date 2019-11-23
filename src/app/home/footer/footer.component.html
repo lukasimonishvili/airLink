@@ -2,25 +2,49 @@
   <div class="footer__top">
     <div class="footer__container flex-space-btw">
       <div class="footer__wrapper">
-        <h2 class="footer__heading">Quick Links</h2>
+        <h2 class="footer__heading" translate>footer.heading</h2>
         <ul class="footer__navigation flex-center">
-          <li class="footer__navigation__item" (click)="scrollTo('slider')">
-            Home
+          <li
+            class="footer__navigation__item"
+            (click)="scrollTo('slider')"
+            [innerHTML]="'header.navigation.home' | translate"
+          >
+            <!-- header.navigation.home -->
           </li>
-          <li class="footer__navigation__item" (click)="scrollTo('about')">
-            About us
+          <li
+            class="footer__navigation__item"
+            (click)="scrollTo('about')"
+            [innerHTML]="'header.navigation.about' | translate"
+          >
+            <!-- header.navigation.about -->
           </li>
-          <li class="footer__navigation__item" (click)="scrollTo('services')">
-            Services
+          <li
+            class="footer__navigation__item"
+            (click)="scrollTo('services')"
+            [innerHTML]="'header.navigation.services' | translate"
+          >
+            <!-- header.navigation.services -->
           </li>
-          <li class="footer__navigation__item" (click)="scrollTo('order')">
-            Make order
+          <li
+            class="footer__navigation__item"
+            (click)="scrollTo('order')"
+            [innerHTML]="'header.navigation.order' | translate"
+          >
+            <!-- header.navigation.order -->
           </li>
-          <li class="footer__navigation__item" (click)="scrollTo('speed')">
-            Check speed
+          <li
+            class="footer__navigation__item"
+            (click)="scrollTo('speed')"
+            [innerHTML]="'header.navigation.speed' | translate"
+          >
+            <!-- header.navigation.speed -->
           </li>
-          <li class="footer__navigation__item" (click)="scrollTo('contact')">
-            Contact
+          <li
+            class="footer__navigation__item"
+            (click)="scrollTo('contact')"
+            [innerHTML]="'header.navigation.contanct' | translate"
+          >
+            <!-- header.navigation.contanct -->
           </li>
         </ul>
       </div>
@@ -33,9 +57,7 @@
   </div>
   <div class="footer__bottom">
     <div class="footer__container">
-      <span class="footer__bottom__txt"
-        >Copyright © 2019 AvroLab. All Rights Reserved.</span
-      >
+      <span class="footer__bottom__txt" translate>footer.bottom</span>
     </div>
   </div>
 </footer>

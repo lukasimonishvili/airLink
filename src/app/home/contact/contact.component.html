@@ -4,39 +4,47 @@
     (ngSubmit)="onMessageSubmit()"
     class="contact__form absolute flex-space-btw"
   >
-    <h2 class="contact__form__heading">
-      Don't Hesitate To Contact <br />
-      With Us, Say Hello......
+    <h2
+      class="contact__form__heading"
+      [innerHTML]="'contact.heading' | translate"
+    >
+      <!-- contact.heading -->
     </h2>
     <input
-      placeholder="Full Name Here"
+      placeholder="{{ 'contact.name' | translate }}"
       type="text"
       class="contact__form__input"
       formControlName="name"
     />
     <input
       formControlName="email"
-      placeholder="Email Here"
+      placeholder="{{ 'contact.email' | translate }}"
       type="text"
       class="contact__form__input"
     />
     <input
-      placeholder="Phone Number"
+      placeholder="{{ 'contact.number' | translate }}"
       type="text"
       class="contact__form__input"
       formControlName="number"
     />
     <input
-      formControlName="subject"
+      placeholder="{{ 'contact.subject' | translate }}"
       placeholder="Subject"
       type="text"
       class="contact__form__input"
     />
     <textarea
       formControlName="message"
-      placeholder="Message Us"
+      placeholder="{{ 'contact.message' | translate }}"
       class="contact__form__input contact__form__textarea"
     ></textarea>
-    <button type="submit" class="contact__form__button">Send Message</button>
+    <button
+      type="submit"
+      class="contact__form__button"
+      [innerHTML]="'contact.send' | translate"
+    >
+      <!-- contact.send -->
+    </button>
   </form>
 </div>

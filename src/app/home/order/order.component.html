@@ -1,6 +1,6 @@
 <div class="order" id="order">
   <div class="order__container">
-    <h2 class="order__heading">Make new order online</h2>
+    <h2 class="order__heading" translate>order.heading</h2>
     <form
       [formGroup]="orderForm"
       (ngSubmit)="onOrderSubmit()"
@@ -8,13 +8,13 @@
     >
       <div class="flex-space-btw order__form__input__wrapper">
         <input
-          placeholder="Enter your name..."
+          placeholder="{{ 'order.name' | translate }}"
           type="text"
           class="order__form__input"
           formControlName="name"
         />
         <input
-          placeholder="Enter your last name..."
+          placeholder="{{ 'order.lastName' | translate }}"
           type="text"
           class="order__form__input"
           formControlName="lastName"
@@ -22,30 +22,36 @@
       </div>
       <div class="flex-space-btw order__form__input__wrapper">
         <input
-          placeholder="Enter your phone number..."
+          placeholder="{{ 'order.number' | translate }}"
           type="text"
           class="order__form__input"
           formControlName="number"
         />
         <input
-          placeholder="Enter your address..."
+          placeholder="{{ 'order.address' | translate }}"
           type="text"
           class="order__form__input"
           formControlName="address"
         />
       </div>
       <input
-        placeholder="Enter your ID number..."
+        placeholder="{{ 'order.idNumber' | translate }}"
         type="number"
         class="order__form__input order__form__input__large"
         formControlName="idNumber"
       />
       <textarea
-        placeholder="Enter message..."
+        placeholder="{{ 'order.message' | translate }}"
         class="order__form__textarea"
         formControlName="message"
       ></textarea>
-      <button type="submit" class="order__form__submit">Send</button>
+      <button
+        type="submit"
+        class="order__form__submit"
+        [innerHTML]="'order.send' | translate"
+      >
+        <!-- order.send -->
+      </button>
     </form>
   </div>
 </div>

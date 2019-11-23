@@ -12,6 +12,10 @@
   );
   padding: 55px 0 25px 0;
 
+  @media screen and (max-width: 730px) {
+    margin-top: 700px;
+  }
+
   &__container {
     width: 1110px;
     height: 100%;
@@ -89,7 +93,7 @@
   }
 }
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 835px) {
   .footer {
     &__logo {
       display: none;
