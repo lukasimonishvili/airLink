@@ -3,8 +3,11 @@
     <div class="about__information">
       <h2 class="about__information__heading" translate>about.heading</h2>
       <div class="about__information__line relative"></div>
-      <p class="about__information__paragraph" translate>
-        about.text
+      <p
+        class="about__information__paragraph"
+        [innerHTML]="'about.text' | translate"
+      >
+        <!-- about.text -->
       </p>
     </div>
     <img

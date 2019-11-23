@@ -4,8 +4,11 @@
     (ngSubmit)="onMessageSubmit()"
     class="contact__form absolute flex-space-btw"
   >
-    <h2 class="contact__form__heading" translate>
-      contact.heading
+    <h2
+      class="contact__form__heading"
+      [innerHTML]="'contact.heading' | translate"
+    >
+      <!-- contact.heading -->
     </h2>
     <input
       placeholder="{{ 'contact.name' | translate }}"
@@ -36,8 +39,12 @@
       placeholder="{{ 'contact.message' | translate }}"
       class="contact__form__input contact__form__textarea"
     ></textarea>
-    <button type="submit" class="contact__form__button" translate>
-      contact.send
+    <button
+      type="submit"
+      class="contact__form__button"
+      [innerHTML]="'contact.send' | translate"
+    >
+      <!-- contact.send -->
     </button>
   </form>
 </div>

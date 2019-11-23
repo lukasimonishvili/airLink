@@ -12,7 +12,7 @@ import { OrderComponent } from "./order/order.component";
 import { SpeedTestComponent } from "./speed-test/speed-test.component";
 import { ContactComponent } from "./contact/contact.component";
 import { FooterComponent } from "./footer/footer.component";
-import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
@@ -46,6 +46,6 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [TranslateModule]
+  providers: []
 })
 export class HomeModule {}

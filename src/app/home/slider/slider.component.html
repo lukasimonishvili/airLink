@@ -19,11 +19,17 @@
   </div>
   <div class="slider__information flex">
     <h3 class="slider__information__heading" translate>slider.chanels</h3>
-    <h2 class="slider__information__heading__main" translate>
-      slider.internet
+    <h2
+      class="slider__information__heading__main"
+      [innerHTML]="'slider.internet' | translate"
+    >
+      <!-- slider.internet -->
     </h2>
-    <p class="slider__information__content" translate>
-      slider.text
+    <p
+      class="slider__information__content"
+      [innerHTML]="'slider.text' | translate"
+    >
+      <!-- slider.text -->
     </p>
   </div>
 </div>
