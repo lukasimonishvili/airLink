@@ -50,6 +50,5 @@ export class OrdersService {
   public deleteOrder(id) {
     return this.http
       .delete(`${this.url}/order/remove/${this.admin}/${id}`)
-      .pipe(map(response => response))
   }
 }

@@ -33,7 +33,6 @@ export class OrderComponent implements OnInit {
       alert("valid");
       let payLoad = this.orderForm.value;
       this.OrdersService.newOrder(payLoad).subscribe(response => {
-        console.log(response);
         if (response["status"] == 200) {
           alert("success");
           this.OrdersService.notifySuccess("Your order sent");
