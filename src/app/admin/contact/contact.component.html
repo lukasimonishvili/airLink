@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div *ngIf="messages && messages.length">
+    <table class="admin__messages">
+        <tr class="admin__messages__tr">
+            <th class="admin__messages__th">#</th>
+            <th class="admin__messages__th">Name</th>
+            <th class="admin__messages__th">E-mail</th>
+            <th class="admin__messages__th">Number</th>
+            <th class="admin__messages__th">subject</th>
+            <th class="admin__messages__th">message</th>
+            <th class="admin__messages__th">Action(s)</th>
+        </tr>
+        <tr class="admin__messages__tr" *ngFor="let message of messages; let i = index">
+            <td class="admin__messages__td">{{i + 1}}</td>
+            <td class="admin__messages__td">{{message.name}}</td>
+            <td class="admin__messages__td">{{message.email}}</td>
+            <td class="admin__messages__td">{{message.number}}</td>
+            <td class="admin__messages__td">{{message.subject}}</td>
+            <td class="admin__messages__td">{{message.message}}</td>
+            <td class="admin__messages__td" (click)="deleteMessage(message._id)">delete</td>
+        </tr>
+    </table>
+</div>
+<div *ngIf="!messages.length">
+    <app-empty></app-empty>
+</div>

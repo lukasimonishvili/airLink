@@ -30,7 +30,7 @@
     />
     <input
       placeholder="{{ 'contact.subject' | translate }}"
-      placeholder="Subject"
+      formControlName="subject"
       type="text"
       class="contact__form__input"
     />
@@ -44,7 +44,6 @@
       class="contact__form__button"
       [innerHTML]="'contact.send' | translate"
     >
-      <!-- contact.send -->
     </button>
   </form>
 </div>

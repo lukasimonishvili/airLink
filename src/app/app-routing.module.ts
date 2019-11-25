@@ -4,6 +4,7 @@ import { ErrorComponent } from "./error/error.component";
 
 const routes: Routes = [
   { path: "", loadChildren: "./home/home.module#HomeModule" },
+  { path: "admin", loadChildren: "./admin/admin.module#AdminModule" },
   { path: "**", component: ErrorComponent }
 ];
 

@@ -11,16 +11,17 @@ const { connect } = require("./server/DB/conn");
 //Routes
 const message = require("./server/routes/message");
 const order = require("./server/routes/order");
+const user = require("./server/routes/user");
 
 app.use(cors());
 app.use(helmet());
-// app.use(require("connect").bodyParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "dist/airLink")));
 
 app.use("/api/message", message);
 app.use("/api/order", order);
+app.use("/api/user", user);
 // Send all other requests to the Angular app
 app.all("*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/airLink/index.html"));
