@@ -7,9 +7,8 @@ import { AcdcNotificationsService } from "acdc-notifications";
 @Injectable({
   providedIn: "root"
 })
-export class MessagesService {
+export class LoginService {
   url = environment.API_URL;
-  admin = window.localStorage.getItem("user");
 
   constructor(
     private http: HttpClient,
@@ -26,28 +25,16 @@ export class MessagesService {
 
   public notifError(message) {
     this.notifier.toast({
-      title: message,
-      timeout: 3000,
+      title: "Error!",
+      message: message,
+      timeout: 5000,
       notificationLevel: "Error"
     });
   }
 
-  public sendMessage(payLoad) {
+  public login(payLoad) {
     return this.http
-      .post(this.url + "/message/send", payLoad)
-      .pipe(map(response => response));
+      .post(this.url + "/user/login", payLoad)
+      .pipe(map(result => result));
   }
-
-  public getAllMessages() {
-    return this.http
-      .get(this.url + "/message/all/" + this.admin)
-      .pipe(map(response => response))
-  }
-
-  public deleteMessage(id) {
-    return this.http
-      .delete(`${this.url}/message/delete/${this.admin}/${id}`)
-      .pipe(map(response => response));
-  }
-
 }

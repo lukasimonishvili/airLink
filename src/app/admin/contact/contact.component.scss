@@ -1,0 +1,32 @@
+.admin{
+    &__messages{
+        width: 900px;
+        margin: 0 auto;
+        margin-top: 100px;
+
+        &__tr{
+            border-bottom: 1px solid rgb(0, 58, 93);
+
+            &:nth-child(even){
+                background: #d5d1d1;
+            }
+        }
+
+        &__th{
+            text-align: center;
+            line-height: 30px;
+        }
+
+        &__td{
+            line-height: 30px;
+            text-align: center;
+            border-left: 1px solid rgb(0, 58, 93);
+            padding: 0 10px;
+
+            &:last-child{
+                border-right: 1px solid rgb(0, 58, 93);
+                cursor: pointer;
+            }
+        }
+    }
+}

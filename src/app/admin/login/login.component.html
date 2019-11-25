@@ -1,0 +1,24 @@
+<div *ngIf="loginStatus">
+  <app-panel></app-panel>
+</div>
+<div *ngIf="!loginStatus">
+  <div class="login">
+    <img class="login__icon" src="../../../assets/img/login.png" alt="" />
+    <div class="login__heading">Sign in</div>
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+      <input
+        formControlName="userName"
+        placeholder="User Name"
+        type="text"
+        class="login__input"
+      />
+      <input
+        formControlName="password"
+        placeholder="Password"
+        type="password"
+        class="login__input"
+      />
+      <button class="login__button">LOG IN</button>
+    </form>
+  </div>
+</div>

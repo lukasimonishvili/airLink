@@ -9,6 +9,7 @@ import { AcdcNotificationsService } from "acdc-notifications";
 })
 export class OrdersService {
   url = environment.API_URL;
+  admin = window.localStorage.getItem("user");
 
   constructor(
     private http: HttpClient,
@@ -35,5 +36,17 @@ export class OrdersService {
     return this.http
       .post(this.url + "/order/new", payLoad)
       .pipe(map(response => response));
+  }
+
+  public getAllOrder() {
+    return this.http
+      .get(this.url + "/order/all/" + this.admin)
+      .pipe(map(response => response));
+  }
+
+  public deleteOrder(id) {
+    return this.http
+      .delete(`${this.url}/order/remove/${this.admin}/${id}`)
+      .pipe(map(response => response))
   }
 }

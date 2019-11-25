@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div *ngIf="orders && orders.length">
+    <table class="admin__orders">
+        <tr class="admin__orders__tr">
+            <th class="admin__orders__th">#</th>
+            <th class="admin__orders__th">Name</th>
+            <th class="admin__orders__th">Last Name</th>
+            <th class="admin__orders__th">Number</th>
+            <th class="admin__orders__th">Address</th>
+            <th class="admin__orders__th">ID Number</th>
+            <th class="admin__orders__th">message</th>
+            <th class="admin__orders__th">Action(s)</th>
+        </tr>
+        <tr class="admin__orders__tr" *ngFor="let order of orders; let i = index">
+            <td class="admin__orders__td">{{i + 1}}</td>
+            <td class="admin__orders__td">{{order.name}}</td>
+            <td class="admin__orders__td">{{order.lastName}}</td>
+            <td class="admin__orders__td">{{order.number}}</td>
+            <td class="admin__orders__td">{{order.address}}</td>
+            <td class="admin__orders__td">{{order.idNumber}}</td>
+            <td class="admin__orders__td">{{order.message}}</td>
+            <td class="admin__orders__td" (click)="removeOrder(order._id)">delete</td>
+        </tr>
+    </table>
+</div>
+<div *ngIf="!orders.length">
+    <app-empty></app-empty>
+</div>

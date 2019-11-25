@@ -1,0 +1,26 @@
+<div class="admin__header">
+  <div class="admin__header__container flex-space-btw">
+    <img
+      src="../../../assets/img/admin.png"
+      alt=""
+      class="admin__header__logo"
+    />
+    <ul class="admin__header__navigation flex-center">
+      <li
+        routerLink="/admin/orders"
+        class="admin__header__navigation__item"
+        routerLinkActive="admin__header__navigation__item__active"
+      >
+        Orders
+      </li>
+      <li
+        routerLink="/admin/messages"
+        class="admin__header__navigation__item"
+        routerLinkActive="admin__header__navigation__item__active"
+      >
+        Messages
+      </li>
+      <li class="admin__header__navigation__item" (click)="logOut()">Log Out</li>
+    </ul>
+  </div>
+</div>
