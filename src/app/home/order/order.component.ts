@@ -24,18 +24,24 @@ export class OrderComponent implements OnInit {
   }
 
   public onOrderSubmit() {
+    alert("first step");
     if (this.orderForm.invalid) {
+      alert("invalid");
       return;
     }
     if (this.orderForm.valid) {
+      alert("valid");
       let payLoad = this.orderForm.value;
       this.OrdersService.newOrder(payLoad).subscribe(response => {
         console.log(response);
         if (response["status"] == 200) {
+          alert("success");
           this.OrdersService.notifySuccess("Your order sent");
         } else {
+          alert("error");
           this.OrdersService.notifError("Please try again");
         }
+        alert("try to reset");
         this.orderForm.reset();
       });
     }

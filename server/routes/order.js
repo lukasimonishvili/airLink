@@ -23,4 +23,17 @@ router.post("/new", (req, res) => {
     });
 });
 
+router.delete("/remove/:id/:orderId",authMiddleware.isLogedIn, (req, res) => {
+  let id = req.params.orderId;
+  Order.findByIdAndRemove(id).then(result => {
+    if (result) {
+      res.json({ status: 200, message: "Deleted" });
+    } else {
+      res.json({status: 400, message: "order not found in data base"})
+    }
+  }).catch(err => {
+    res.json({status: 500, message: "system error - please try again", error: err})
+  })
+})
+
 module.exports = router;
