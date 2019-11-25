@@ -17,7 +17,6 @@ export class OrdersService {
   ) {}
 
   public notifySuccess(message) {
-    alert("in success notif");
     this.notifier.toast({
       title: message,
       timeout: 3000,
@@ -26,7 +25,6 @@ export class OrdersService {
   }
 
   public notifError(message) {
-    alert("in  error notif");
     this.notifier.toast({
       title: message,
       timeout: 3000,
@@ -35,10 +33,12 @@ export class OrdersService {
   }
 
   public newOrder(payLoad) {
-    alert("in order service");
     return this.http
       .post(this.url + "/order/new", payLoad)
-      .pipe(map(response => response));
+      .pipe(map(response => {
+        console.log(response, "map");
+        return response;
+      } ));
   }
 
   public getAllOrder() {
