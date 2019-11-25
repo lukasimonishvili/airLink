@@ -1,10 +1,28 @@
 const express = require("express");
 const router = express.Router();
+const authMiddleware = require("../middleware/auth.middleware");
 
 const { Order } = require("../models/orders");
 
+router.get("/all/:id", authMiddleware.isLogedIn, (req, res) => {
+  Order.find()
+    .then(result => {
+      if (result && result.length) {
+        res.json({ status: 200, message: "success", data: result });
+      } else {
+        res.json({ status: 400, message: "no orders for now", data: [] });
+      }
+    })
+    .catch(err => {
+      res.json({
+        status: 500,
+        message: "server error - please try again later",
+        error: err
+      });
+    });
+});
+
 router.post("/new", (req, res) => {
-  console.log(req.body);
   let newOrder = new Order(req.body);
   newOrder
     .save()

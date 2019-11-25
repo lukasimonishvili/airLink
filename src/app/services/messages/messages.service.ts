@@ -9,6 +9,7 @@ import { AcdcNotificationsService } from "acdc-notifications";
 })
 export class MessagesService {
   url = environment.API_URL;
+  admin = window.localStorage.getItem("user");
 
   constructor(
     private http: HttpClient,
@@ -36,4 +37,17 @@ export class MessagesService {
       .post(this.url + "/message/send", payLoad)
       .pipe(map(response => response));
   }
+
+  public getAllMessages() {
+    return this.http
+      .get(this.url + "/message/all/" + this.admin)
+      .pipe(map(response => response))
+  }
+
+  public deleteMessage(id) {
+    return this.http
+      .delete(`${this.url}/message/delete/${this.admin}/${id}`)
+      .pipe(map(response => response));
+  }
+
 }

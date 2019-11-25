@@ -1,0 +1,17 @@
+.smile{
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    &__img{
+        height: calc(50vh - 70px);
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__text{
+        text-align: center;
+        font-size: 30px;
+        color: gray;
+        margin-top: 20px;
+    }
+}
