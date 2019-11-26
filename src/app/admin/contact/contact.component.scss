@@ -23,6 +23,36 @@
             border-left: 1px solid rgb(0, 58, 93);
             padding: 0 10px;
 
+            &__confirm{
+                width: 100px;
+                right: 100%;
+                height: 100%;
+                background: rgb(0, 58, 93);
+                top: 0;
+                overflow: hidden;
+                transition: .4s;
+                width: 0;
+
+                &__item{
+                    width: 50%;
+                    text-align: center;
+                    height: 100%;
+                    transition: .3s;
+                    color: white;
+
+                    &:first-child{
+                        &:hover{
+                            background: green;
+                        }
+                    }
+                    &:last-child{
+                        &:hover{
+                            background: red;
+                        }
+                    }
+                }
+            }
+
             &:last-child{
                 border-right: 1px solid rgb(0, 58, 93);
                 cursor: pointer;

@@ -22,7 +22,6 @@ router.post("/login", (req, res) => {
       }
     })
     .catch(err => {
-      console.log(err);
       res.json({
         status: 500,
         message: "can`t login - system error, please try again later"

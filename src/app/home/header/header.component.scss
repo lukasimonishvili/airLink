@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   z-index: 100;
+  border-bottom: 1px solid #3071ff;
 
   @media screen and (max-width: 456px) {
     height: 94px;
@@ -198,18 +199,22 @@
       }
 
       &__navigation {
-        width: 100vw;
+        width: 208px;
         height: calc(100vh - 50px);
         flex-direction: column;
         overflow-y: auto;
+        background: #595959;
 
         &__open {
           left: 0 !important;
         }
 
         &__item {
-          text-align: center;
+          // text-align: center;
           margin: 0;
+          line-height: 60px;
+          color: #fff;
+          padding-left: 20px;
         }
       }
     }

@@ -28,14 +28,12 @@ router.post("/new", (req, res) => {
   newOrder
     .save()
     .then(response => {
-      console.log(response);
       res.json({
         status: 200,
         data: newOrder
       });
     })
     .catch(err => {
-      console.log("error", err);
       res.json({
         status: 400,
         data: err

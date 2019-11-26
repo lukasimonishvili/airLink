@@ -17,7 +17,13 @@
             <td class="admin__messages__td">{{message.number}}</td>
             <td class="admin__messages__td">{{message.subject}}</td>
             <td class="admin__messages__td">{{message.message}}</td>
-            <td class="admin__messages__td" (click)="deleteMessage(message._id)">delete</td>
+            <td class="admin__messages__td relative">
+                <div (click)="openDialog(i)">Delete</div>
+                <div class="absolute admin__messages__td__confirm flex-center">
+                    <div class="admin__messages__td__confirm__item" (click)="deleteMessage(message._id)">Yes</div>
+                    <div class="admin__messages__td__confirm__item" (click)="closeConfirmation()">No</div>
+                </div>
+            </td>
         </tr>
     </table>
 </div>

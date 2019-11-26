@@ -8,7 +8,7 @@
             <th class="admin__orders__th">Number</th>
             <th class="admin__orders__th">Address</th>
             <th class="admin__orders__th">ID Number</th>
-            <th class="admin__orders__th">message</th>
+            <th class="admin__orders__th">Message</th>
             <th class="admin__orders__th">Action(s)</th>
         </tr>
         <tr class="admin__orders__tr" *ngFor="let order of orders; let i = index">
@@ -19,12 +19,13 @@
             <td class="admin__orders__td">{{order.address}}</td>
             <td class="admin__orders__td">{{order.idNumber}}</td>
             <td class="admin__orders__td">{{order.message}}</td>
-            <td class="admin__orders__td"
-            mwlConfirmationPopover
-            [popoverTitle]="'Are you sure'"
-            [popoverMessage]="'to remove this order?'"
-            placement="right"
-            (confirm)="test()" >delete</td>
+            <td class="admin__orders__td relative">
+                <div (click)="openDialog(i)">Delete</div>
+                <div class="absolute admin__orders__td__confirm flex-center">
+                    <div class="admin__orders__td__confirm__item" (click)="removeOrder(order._id)">Yes</div>
+                    <div class="admin__orders__td__confirm__item" (click)="closeConfirmation()">No</div>
+                </div>
+            </td>
         </tr>
     </table>
 </div>

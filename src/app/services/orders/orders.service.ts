@@ -33,7 +33,6 @@ export class OrdersService {
   }
 
   public newOrder(payLoad) {
-    console.log(payLoad);
     return this.http
       .post("/api/order/new", payLoad)
       .pipe(map(response => response));
@@ -47,6 +46,6 @@ export class OrdersService {
 
   public deleteOrder(id) {
     return this.http
-      .delete(`/order/remove/${this.admin}/${id}`)
+      .delete(`/api/order/remove/${this.admin}/${id}`)
   }
 }

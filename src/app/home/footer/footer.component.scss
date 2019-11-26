@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  margin-top: 555px;
+  // margin-top: -25px;
   background: #21223f;
   clip-path: polygon(
     26.4583% 0,
@@ -11,10 +11,6 @@
     0 0
   );
   padding: 55px 0 25px 0;
-
-  @media screen and (max-width: 730px) {
-    margin-top: 700px;
-  }
 
   &__container {
     width: 1110px;
