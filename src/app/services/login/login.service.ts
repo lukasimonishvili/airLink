@@ -34,7 +34,7 @@ export class LoginService {
 
   public login(payLoad) {
     return this.http
-      .post(this.url + "/user/login", payLoad)
+      .post("/api/user/login", payLoad)
       .pipe(map(result => result));
   }
 }

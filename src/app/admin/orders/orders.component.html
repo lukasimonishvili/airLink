@@ -19,7 +19,12 @@
             <td class="admin__orders__td">{{order.address}}</td>
             <td class="admin__orders__td">{{order.idNumber}}</td>
             <td class="admin__orders__td">{{order.message}}</td>
-            <td class="admin__orders__td" (click)="removeOrder(order._id)">delete</td>
+            <td class="admin__orders__td"
+            mwlConfirmationPopover
+            [popoverTitle]="'Are you sure'"
+            [popoverMessage]="'to remove this order?'"
+            placement="right"
+            (confirm)="test()" >delete</td>
         </tr>
     </table>
 </div>

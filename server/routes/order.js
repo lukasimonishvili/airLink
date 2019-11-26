@@ -23,10 +23,12 @@ router.get("/all/:id", authMiddleware.isLogedIn, (req, res) => {
 });
 
 router.post("/new", (req, res) => {
+  
   let newOrder = new Order(req.body);
   newOrder
     .save()
     .then(response => {
+      console.log(response);
       res.json({
         status: 200,
         data: newOrder

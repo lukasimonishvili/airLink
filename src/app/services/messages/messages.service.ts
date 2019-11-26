@@ -34,19 +34,19 @@ export class MessagesService {
 
   public sendMessage(payLoad) {
     return this.http
-      .post(this.url + "/message/send", payLoad)
+      .post("/api/message/send", payLoad)
       .pipe(map(response => response));
   }
 
   public getAllMessages() {
     return this.http
-      .get(this.url + "/message/all/" + this.admin)
+      .get("/api/message/all/" + this.admin)
       .pipe(map(response => response))
   }
 
   public deleteMessage(id) {
     return this.http
-      .delete(`${this.url}/message/delete/${this.admin}/${id}`)
+      .delete(`/api/message/delete/${this.admin}/${id}`)
       .pipe(map(response => response));
   }
 

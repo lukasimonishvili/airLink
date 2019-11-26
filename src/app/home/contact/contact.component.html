@@ -39,11 +39,13 @@
       placeholder="{{ 'contact.message' | translate }}"
       class="contact__form__input contact__form__textarea"
     ></textarea>
-    <button
-      type="submit"
-      class="contact__form__button"
-      [innerHTML]="'contact.send' | translate"
-    >
-    </button>
+    <div style="display: flex; justify-content: flex-end; width: 100%">
+        <button
+          type="submit"
+          class="contact__form__button"
+          [innerHTML]="'contact.send' | translate"
+        >
+        </button>
+    </div>
   </form>
 </div>

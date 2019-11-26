@@ -45,13 +45,15 @@
         class="order__form__textarea"
         formControlName="message"
       ></textarea>
-      <button
-        type="submit"
-        class="order__form__submit"
-        [innerHTML]="'order.send' | translate"
-      >
-        <!-- order.send -->
-      </button>
+      <div style="display: flex; justify-content: flex-end; width: 100%">
+          <button
+            type="submit"
+            class="order__form__submit"
+            [innerHTML]="'order.send' | translate"
+          >
+          </button>
+      </div>
     </form>
   </div>
 </div>
+<div>{{errorText}}</div>

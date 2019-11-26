@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/operators";
+import { map , catchError } from "rxjs/operators";
 import { environment } from "../../../environments/environment";
 import { AcdcNotificationsService } from "acdc-notifications";
 
@@ -33,22 +33,20 @@ export class OrdersService {
   }
 
   public newOrder(payLoad) {
+    console.log(payLoad);
     return this.http
-      .post(this.url + "/order/new", payLoad)
-      .pipe(map(response => {
-        console.log(response, "map");
-        return response;
-      } ));
+      .post("/api/order/new", payLoad)
+      .pipe(map(response => response));
   }
 
   public getAllOrder() {
     return this.http
-      .get(this.url + "/order/all/" + this.admin)
+      .get("/api/order/all/" + this.admin)
       .pipe(map(response => response));
   }
 
   public deleteOrder(id) {
     return this.http
-      .delete(`${this.url}/order/remove/${this.admin}/${id}`)
+      .delete(`/order/remove/${this.admin}/${id}`)
   }
 }

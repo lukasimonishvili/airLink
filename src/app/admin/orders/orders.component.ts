@@ -23,19 +23,20 @@ export class OrdersComponent implements OnInit {
   }
 
   public removeOrder(id) {
-    let confirmed = confirm("Are you sure remove this oreder?");
-    if (confirmed) {
-      this.ordersService.deleteOrder(id).subscribe(response => {
-        if (response["status"] == 200) {
-          this.ordersService.notifySuccess(response["message"]);
-          this.getAllOrder();
-        } else if (response["status"] == 401) {
-          window.location.replace("/admin");
-        } else {
-          this.ordersService.notifError(response["message"]);
-        }
-      })
-    }
+    this.ordersService.deleteOrder(id).subscribe(response => {
+      if (response["status"] == 200) {
+        this.ordersService.notifySuccess(response["message"]);
+        this.getAllOrder();
+      } else if (response["status"] == 401) {
+        window.location.replace("/admin");
+      } else {
+        this.ordersService.notifError(response["message"]);
+      }
+    })
+  }
+
+  test() {
+    console.log("confirmed")
   }
 
   ngOnInit() {

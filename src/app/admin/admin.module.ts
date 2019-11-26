@@ -10,6 +10,9 @@ import { OrdersComponent } from "./orders/orders.component";
 import { ContactComponent } from "./contact/contact.component";
 import { AuthGuardService } from "../services/authGuard/auth-guard.service";
 import { EmptyComponent } from './empty/empty.component';
+import 'bootstrap/dist/css/bootstrap.css';
+import { ConfirmationPopoverModule } from "angular-confirmation-popover";
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { EmptyComponent } from './empty/empty.component';
     ContactComponent,
     EmptyComponent
   ],
-  imports: [CommonModule, AdminRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, AdminRoutingModule, FormsModule, ReactiveFormsModule,ConfirmationPopoverModule.forRoot({
+    confirmButtonType: 'danger'
+  })],
   providers: [AuthGuardService]
 })
 export class AdminModule {}
