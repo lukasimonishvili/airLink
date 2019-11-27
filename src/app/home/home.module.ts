@@ -15,6 +15,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    SlideshowModule
   ],
   providers: []
 })

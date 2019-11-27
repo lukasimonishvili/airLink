@@ -32,6 +32,7 @@
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.12",
+    "ng-simple-slideshow": "^1.2.9",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.5.3",
     "tslib": "^1.9.0",

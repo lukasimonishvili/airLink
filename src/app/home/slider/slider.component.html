@@ -1,35 +1,10 @@
 <div class="slider" id="slider">
-  <div class="slider__blur"></div>
-  <div
-    class="slider__arrow__left slider__arrow"
-    (click)="moveSlide('prev')"
-  ></div>
-  <div
-    class="slider__arrow__right slider__arrow"
-    (click)="moveSlide('next')"
-  ></div>
-  <div class="slider__wrapper">
-    <img
-      src="../../../assets/img/slide1.jpg"
-      alt=""
-      class="slider__item slider__item__active"
-    />
-    <img src="../../../assets/img/slide2.jpg" alt="" class="slider__item" />
-    <img src="../../../assets/img/slide3.jpg" alt="" class="slider__item" />
-  </div>
-  <div class="slider__information flex">
-    <h3 class="slider__information__heading" translate>slider.chanels</h3>
-    <h2
-      class="slider__information__heading__main"
-      [innerHTML]="'slider.internet' | translate"
-    >
-      <!-- slider.internet -->
-    </h2>
-    <p
-      class="slider__information__content"
-      [innerHTML]="'slider.text' | translate"
-    >
-      <!-- slider.text -->
-    </p>
-  </div>
+  <slideshow [height]="height"
+           [minHeight]="'525px'"
+           [autoPlay]="true"
+           [showArrows]="true"
+           [imageUrls]="imageSources"
+           [lazyLoad]="imageSources?.length > 1"
+           [autoPlayWaitForLazyLoad]="true">
+  </slideshow>
 </div>
