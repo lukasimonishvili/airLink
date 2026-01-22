@@ -8,7 +8,7 @@ import { MessagesService } from "../../services/messages/messages.service";
   styleUrls: ["./contact.component.scss"]
 })
 export class ContactComponent implements OnInit {
-  private messageForm: FormGroup;
+  public messageForm: FormGroup;
 
   constructor(
     private messagesService: MessagesService,

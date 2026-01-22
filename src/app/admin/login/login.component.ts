@@ -8,7 +8,8 @@ import { LoginService } from "../../services/login/login.service";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
-  private loginForm: FormGroup;
+  public loginForm: FormGroup;
+  public loginStatus: boolean = false;
 
   constructor(private LoginService: LoginService, private fb: FormBuilder) {}
 

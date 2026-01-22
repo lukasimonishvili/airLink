@@ -6,6 +6,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./slider.component.scss"]
 })
 export class SliderComponent implements OnInit {
+  public height: string = "525px";
+  
   constructor() { }
   
   imageSources: Array<any> = [

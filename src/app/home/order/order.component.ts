@@ -8,7 +8,8 @@ import { OrdersService } from "../../services/orders/orders.service";
   styleUrls: ["./order.component.scss"]
 })
 export class OrderComponent implements OnInit {
-  private orderForm: FormGroup;
+  public orderForm: FormGroup;
+  public errorText: string = "";
 
   constructor(private OrdersService: OrdersService, private fb: FormBuilder) {}
 

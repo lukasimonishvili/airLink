@@ -8,7 +8,7 @@ import { MessagesService } from "../../services/messages/messages.service";
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  private messages: Array<any> = [];
+  public messages: Array<any> = [];
   private activeIndex: number = -1;
   constructor(private messagesService: MessagesService) { }
 

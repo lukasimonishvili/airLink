@@ -7,7 +7,7 @@ import { OrdersService } from "../../services/orders/orders.service";
   styleUrls: ["./orders.component.scss"]
 })
 export class OrdersComponent implements OnInit {
-  private orders: Array<any> = [];
+  public orders: Array<any> = [];
   private activeIndex: number = -1;
 
   constructor(private ordersService: OrdersService ) {}
